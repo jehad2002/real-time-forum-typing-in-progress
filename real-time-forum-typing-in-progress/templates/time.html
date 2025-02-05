@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Chat with Typing Indicator</title>
+    <style>
+        .typing-indicator {
+            display: none;
+            font-style: italic;
+            color: gray;
+        }
+        #chat-box {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 10px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Real-Time Chat</h2>
+
+    <div id="chat-box"></div>
+    <div class="typing-indicator" id="typing-indicator">User is typing...</div>
+
+    <input type="text" id="message-input" placeholder="Type a message..." />
+
+    <script>
+        const ws = new WebSocket('ws://localhost:8080/ws');
+        const messageInput = document.getElementById("message-input");
+        const typingIndicator = document.getElementById("typing-indicator");
+        const chatBox = document.getElementById("chat-box");
+
+        let typingTimeout;
+
+        // WebSocket on message handler
+        ws.onmessage = function(event) {
+            const message = JSON.parse(event.data);
+            if (message.type === "typing") {
+                showTypingIndicator(message.userID);
+            } else if (message.type === "stop_typing") {
+                hideTypingIndicator();
+            }
+        };
+
+        // Handle typing indicator
+        function showTypingIndicator(userID) {
+            typingIndicator.style.display = "block";
+            typingIndicator.textContent = `${userID} is typing...`;
+        }
+
+        function hideTypingIndicator() {
+            typingIndicator.style.display = "none";
+        }
+
+        // Event handler for input field
+        messageInput.addEventListener('input', function() {
+            // Send typing status to the server
+            sendTypingStatus("user123", "recipient456", messageInput.value);
+        });
+
+        // Send typing status to the server
+        function sendTypingStatus(userID, targetID, content) {
+            clearTimeout(typingTimeout);
+
+            // Send "typing" message
+            ws.send(JSON.stringify({
+                type: "typing",
+                userID: userID,
+                target: targetID,
+                content: content
+            }));
+
+            // Stop typing after a short delay (e.g., 2 seconds of inactivity)
+            typingTimeout = setTimeout(function() {
+                ws.send(JSON.stringify({
+                    type: "stop_typing",
+                    userID: userID,
+                    target: targetID,
+                    content: content
+                }));
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

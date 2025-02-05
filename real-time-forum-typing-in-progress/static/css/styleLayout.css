@@ -1,0 +1,234 @@
+go 
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white
+    /* overflow-x: hidden; 
+    overflow-y: hidden;  */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    max-width: auto;
+}
+
+.search{
+    width: 30%;
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: row;
+}
+
+.search input[type="text"] {
+    width: 60%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.search button:hover {
+    background-color: #444;
+}
+
+.login-link a:hover {
+    background-color: rgb(44, 115, 120);
+    color: black;
+}
+
+.content {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 370px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color:#333;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        min-width: 370px;
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:#333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; 
+}
+.categories {
+    width: 20%;
+    background-color: white;
+    padding: 10px;
+    height: 70%;
+    border-right: 1px solid #ccc;
+    position: sticky;
+    /*top: 100px; /* Hauteur de l'en-tête */
+    text-align: center;
+}   
+
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 9999; 
+  }
+  
+  #scroll-to-top i {
+    font-size: 30px; 
+  }
+
+.user-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.user-dropdown .dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+    border-bottom: 1px solid #b68435; 
+}
+
+
+.dropdown-content a:last-child {
+    border-bottom: none; 
+}
+
+.username-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.user-dropdown .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.user-dropdown i.fas.fa-user {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.user-dropdown span.username {
+    font-size: 16px;
+    margin-right:110px ;
+    color: rgb(224, 92, 21);;
+}
+
+.user-dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .user-dropdown span.username {
+        font-size: 14px;
+        margin-right: 80px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .user-dropdown span.username {
+        font-size: 12px;
+        margin-right: 60px;
+    }
+}
+
+h1, h2, h3, span,p{
+    word-break: break-all;
+}
+
+p{
+    margin-block-end: 0em;
+}
+
+    /* Style de l'alerte */
+    .custom-alert {
+        position: fixed;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(244, 67, 54, 0.9); 
+        color: white;
+        text-align: center;
+        padding: 10px;
+        z-index: 1000; 
+    }
+    .close-button {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        color: black;
+        cursor: pointer;
+    }
+
+.logout-container {
+    text-align: center;
+}
+
+.logout-container i {
+    font-size: 20px; 
+    margin-right: 0px; 
+    color:rgb(156, 143, 143);
+}
+
+.logout-container input[type="submit"] {
+    font-size: 15px;
+    padding: 5px 10px; 
+    background-color:white; 
+    color: black; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+.logout-container a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.logout-container input[type="submit"]:hover {
+    background-color: red; 
+}

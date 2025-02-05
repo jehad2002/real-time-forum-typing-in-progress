@@ -1,0 +1,162 @@
+#popup-signup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999; 
+}
+
+.popup-signup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+#close-signup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.signup-box {
+    border-radius: 4px;
+    background-color: #fff;
+    width: 450px;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+    margin-top: 50px;
+}
+
+.header.signup-header {
+    background: url("/static/image/loginbackgroun.jpg") center #d14269;
+    background-size: cover;
+    height: 130px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    align-items: center;
+    color: #f5f5f5;
+}
+
+.signup {
+    margin: 15px 20px;
+}
+
+.form-control1 input[type="text"],
+.form-control1 input[type="email"],
+.form-control1 input[type="password"] {
+    width: 97.33%;
+    height: 28px;
+    padding-left: 10px;
+    border-radius: 3px;
+    border: 1px solid #f1f1f1;
+    margin-bottom: 10px;
+    outline: none;
+    font-size: 0.9rem;
+    transition: 0.6s;
+    color: #57bb90;
+}
+
+.form-control1 input[type="text"]:focus,
+.form-control1 input[type="email"]:focus,
+.form-control1 input[type="password"]:focus {
+    border: 1px solid rgba(216, 204, 28, 0.36);
+    transition: 0.6s;
+    color: #d14269;
+}
+
+.form-control1 input[type="submit"],
+.form-control1 button {
+    border: none;
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    outline: none;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.form-control1 input[type="submit"] {
+    background-color: #033551;
+    color: #f5f5f5;
+}
+
+.form-control1 button {
+    background-color: transparent;
+    color: #5cc299;
+}
+
+.form-control1 input[type="submit"]:hover,
+.form-control1 button:hover {
+    background-color: #40a159;
+    transition: 0.6s;
+}
+
+.form-control1 p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-control1 a {
+    color: #aedc16;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.form-control1 a:hover {
+    color: #d14269;
+}
+
+.cancel-button {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.cancel-button button {
+    border: none;
+    background-color: transparent;
+    color: #49ca22;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.cancel-button button:hover {
+    color: #d14269;
+}
+
+.form-control1 #google-signup-button {
+    border: none;
+    background-color: #4285f4; 
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    outline: none;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.form-control1 #google-signup-button:hover {
+    background-color: #357ae8; 
+    transition: 0.6s;
+}

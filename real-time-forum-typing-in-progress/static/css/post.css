@@ -1,0 +1,391 @@
+@media screen and (min-width: 1025px) {
+    .post {
+        margin-bottom: 20px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        padding: 10px;
+        max-width: 100%;
+        background-color: white;
+        box-shadow: 2px 1px 20px rgb(119, 117, 117);
+        width: 90%;
+        text-decoration: none;
+    }
+
+    .profile-create-post {
+        height: 4em;
+        width: 90%;
+        /*margin-top: 45px;/*/
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-bottom: 15px;
+        padding-left: 12px;
+        background: #2C353D;
+        border-radius: 6px;
+        align-items: center;
+        gap: 10px;
+        display: flex;
+    }
+
+    .categories {
+        width: 15%;
+        background-color: white;
+        padding: 10px;
+        height: 70%;
+        border-right: 1px solid #ccc;
+        position: sticky;
+        top: 100px;  
+        text-align: center;
+    }
+    
+    .chatContent {
+        width: 25%;
+        background-color: white;
+        /* padding: 10px; */
+        height: 70%;
+        border-right: 1px solid #ccc;
+        position: sticky;
+        top: 100px; 
+        text-align: center;
+    }
+
+    .main-container {
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 100px;
+        height: 10%;
+        
+    }
+    
+    .content {
+        width: 60%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-link a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 25px;
+        /* border: 1px solid white; */
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        font-size: 15px;
+    }
+    
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .content {
+        width: 70%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .post {
+        margin-bottom: 20px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        padding: 10px;
+        max-width: 100%;
+        background-color: white;
+        box-shadow: 2px 1px 20px rgb(119, 117, 117);
+        width: 95%;
+    }
+
+    .profile-create-post {
+        height: 4em;
+        width: 95%;
+        margin-top: 0px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-bottom: 15px;
+        padding-left: 12px;
+        background: #2C353D;
+        border-radius: 6px;
+        align-items: center;
+        gap: 10px;
+        display: flex;
+    }
+
+    .footer {
+        display: block;
+    }
+
+    #chatbox {
+        width: 30%;
+        background: #fff;
+        border-radius: 6px;
+        overflow: hidden;
+        height: 484px;
+        position: absolute;
+        top: 90px;
+    }
+
+    .categories {
+        display: none;
+        width: 200px;
+        background-color: white;
+        padding: 10px;
+        height: 70%;
+        border-right: 1px solid #ccc;
+        position: sticky;
+        top: 100px;
+        text-align: center;
+    }   
+
+    .main-container {
+        padding: 10px;
+        margin-top: 45px;
+        display: flex;
+        /*justify-content: space-between;*/
+        margin-bottom: 100px;
+        height: 10%;
+        
+    }
+
+    .login-link a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        /* border: 1px solid white; */
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        font-size: 0.9rem;
+    }
+    
+}
+
+    .post h2 {
+        margin: 10px;
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        /* margin-left: -5%; */
+        border-radius: 20px;
+        box-shadow: 2px 1px 30px rgba(21, 131, 167, 0.6);
+    }
+
+    .post-video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .post h2 a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    .votes{
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        margin-top: 8px;
+    }
+
+    .votes span {
+        margin-right: 10px;
+        font-size: 15px;
+        cursor: pointer;
+        word-break: normal;
+    }
+
+    .vote-icon,
+    .comment-icon {
+        margin-right: 10px;
+        font-size: 20px;
+    }
+
+    .post-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .vote-button {
+        width: auto;
+        height: 60%;
+        margin: 0 auto;
+        border-radius: 50%;
+        font-size: 90%;
+        border: none;
+        cursor: pointer;
+    }
+
+    button.dislike {
+        color: rgb(214, 11, 11);
+        background-color: rgba(255, 138, 128, 0.3);
+        border-color: rgba(255, 82, 82, 1);
+        margin: 10%;
+    }
+
+    button.like {
+        margin: 5px;
+        color: rgba(0, 150, 136, 1);
+        background-color: rgba(38, 166, 154, 0.3);
+        border-color: rgba(0, 150, 136, 1);
+        margin: 5%;
+    }
+
+    .vote-button.comment {
+        color: rgba(0, 151, 167, 1);
+        background-color: rgba(0, 0, 0, 0); /* Fond transparent */
+        border-color: rgb(14, 23, 24);
+        border-width: 1px;
+        margin-top: 10px;
+        margin-left: 10px;
+        /* wigth: 4em; */
+        /* border: 1px solid black; */
+    }
+
+    .content-like-dislike{
+        background-color: rgb(241, 234, 234);
+        border-radius: 20px;
+        height: 45px;
+        width: 140px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    span{
+        font-weight: bold;
+    }
+
+    .user-info-post {
+        width: 50%;
+        margin: 0% 0% 0% 0%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        display: inline-flex;
+    }
+
+    .profile-image {
+        width: 40px;
+        height: 40px;
+        position: relative;
+    }
+
+    .circle {
+        width: 40px;
+        height: 40px;
+        left: 0px;
+        top: 0px;
+        position: absolute;
+        background: #F9DFC0;
+        border-radius: 9999px;
+    }
+
+    .image-container {
+        width: 30px;
+        height: 32px;
+        left: 5px;
+        top: 4px;
+        position: absolute;
+    }
+
+    .profile-image img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 50%;
+        left: 5px;
+        top: 4px;
+    }
+
+    .input-box {
+        flex: 1;
+    }
+
+    .input-text {
+        width: 70%;
+        height: 40px;
+        color: #858EAD;
+        font-size: 14px;
+        font-family: Source Sans Pro;
+        font-weight: 400;
+        line-height: 22px;
+        word-wrap: break-word;
+        border-radius: 10px;
+    }
+
+    .create_post {
+        width: auto;
+        padding: 0px;
+        margin-right: 1%;
+        border-radius: 10px;
+        border: 3px solid #FF6934;
+    }
+
+    .create-post-button {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 6px;
+        margin: 0px;
+        padding-bottom: 12px;
+        background: #FF6934;
+        justify-content: flex-start;
+        align-items: flex-start;
+        display: flex;
+        color: white;
+        font-size: 1.35em;
+        font-family: Rubik;
+        font-weight: 500;
+        line-height: 20px;
+        word-wrap: break-word;
+        text-decoration: none;
+
+    }
+
+    .title-content {
+        width: 95%;
+        height: auto;
+        margin: auto;
+        margin-bottom: 0.5em;
+        font-size: 1.5em;
+        word-wrap: break-word;
+    }
+
+    .description {
+    width: 95%;
+    margin: auto;
+    }
+
+.post.show {
+    display: block;
+}
+.post.hide {
+    display: none;
+}
+
+.user-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    border-radius: 50%; 
+}
+
+@media screen and (max-height: 268px) {
+    .truncate-text {
+        display: none;
+    }
+    .truncate-text.truncated {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; 
+    }
+}
+
